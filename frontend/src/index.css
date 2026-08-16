@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  
+  body {
+    @apply bg-[#0D1321] text-slate-100 antialiased selection:bg-[#FFD12E] selection:text-slate-950 font-sans;
+  }
+
+  /* Custom Neo Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #090D16;
+    border-left: 2px solid #000;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #FFD12E;
+    border: 2px solid #000;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #FF6B97;
+  }
+}
+
+@layer utilities {
+  /* Neo-Brutalist Box Styles */
+  .neo-box {
+    background: #151D2C;
+    border: 2.5px solid #000000;
+    box-shadow: 4px 4px 0px #000000;
+  }
+
+  .neo-box-white {
+    background: #FFFFFF;
+    color: #0F172A;
+    border: 2.5px solid #000000;
+    box-shadow: 4px 4px 0px #000000;
+  }
+
+  .neo-box-cream {
+    background: #FFFDF5;
+    color: #0F172A;
+    border: 2.5px solid #000000;
+    box-shadow: 4px 4px 0px #000000;
+  }
+
+  .neo-box-hover {
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .neo-box-hover:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #000000;
+  }
+
+  .neo-interactive-press {
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+  }
+  .neo-interactive-press:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1.5px 1.5px 0px #000000 !important;
+  }
+
+  /* Checkerboard banner ribbon from Reference Image 1 */
+  .checker-ribbon {
+    background-color: #FF6B97;
+    background-image: 
+      linear-gradient(45deg, #FFFFFF 25%, transparent 25%), 
+      linear-gradient(-45deg, #FFFFFF 25%, transparent 25%), 
+      linear-gradient(45deg, transparent 75%, #FFFFFF 75%), 
+      linear-gradient(-45deg, transparent 75%, #FFFFFF 75%);
+    background-size: 16px 16px;
+    background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+  }
+
+  .checker-ribbon-yellow {
+    background-color: #FFD12E;
+    background-image: 
+      linear-gradient(45deg, #000000 25%, transparent 25%), 
+      linear-gradient(-45deg, #000000 25%, transparent 25%), 
+      linear-gradient(45deg, transparent 75%, #000000 75%), 
+      linear-gradient(-45deg, transparent 75%, #000000 75%);
+    background-size: 12px 12px;
+    background-position: 0 0, 0 6px, 6px -6px, -6px 0px;
+  }
+
+  /* Dot Grid Canvas Background */
+  .bg-dot-pattern {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px);
+    background-size: 20px 20px;
+  }
+
+  /* Window Title Header Accent */
+  .retro-window-header {
+    border-bottom: 2.5px solid #000000;
+    background: #1E293B;
+  }
+
+  /* Sticker text outline */
+  .text-stroke-sm {
+    -webkit-text-stroke: 1px #000000;
+  }
+}
